@@ -41,7 +41,7 @@ const Hero = () => {
           <button>{simi}</button>{' '}
         </NavbarTwoColumns>
         <iframe src="https://phet.colorado.edu/sims/cheerpj/photoelectric/latest/photoelectric.html?simulation=photoelectric"
-        width="800"
+        width="999"
         height="600"
         allowfullscreen>
 </iframe>
