@@ -26,38 +26,52 @@ const Hero = () => {
     allFalse();
     setPhoto(true);
   };
-  
 
   return (
     <Background color="bg-gray-100">
       <Section yPadding="py-6">
         <NavbarTwoColumns logo={<Logo xl />}>
           <button
-            onClick={bend}
+            onClick={bendClick}
             className="rounded-full bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
           >
             Bending Light
           </button>
           <button
-            onClick={color}
+            onClick={colorClick}
             className="rounded-full bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
           >
             Color Vision
           </button>
           <button
-            onClick={photo}
+            onClick={photoClick}
             className="rounded-full bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
           >
             PhotoLectric
           </button>
-          <button>{simi}</button>{' '}
+          <button>{light}</button>{' '}
         </NavbarTwoColumns>
-        <iframe src="https://phet.colorado.edu/sims/cheerpj/photoelectric/latest/photoelectric.html?simulation=photoelectric"
-          width="999"
-          height="600"
-          className={}
-          allowfullscreen>
-        </iframe>
+        {light && (
+          <iframe
+            src="https://phet.colorado.edu/sims/html/bending-light/latest/bending-light_en.html"
+            width="999"
+            height="600"
+          ></iframe>
+        )}
+        {color && (
+          <iframe
+            src="https://phet.colorado.edu/sims/html/color-vision/latest/color-vision_en.html"
+            width="999"
+            height="600"
+          ></iframe>
+        )}
+        {photo && (
+          <iframe
+            src="https://phet.colorado.edu/sims/cheerpj/photoelectric/latest/photoelectric.html?simulation=photoelectric"
+            width="999"
+            height="600"
+          ></iframe>
+        )}
       </Section>
     </Background>
   );
