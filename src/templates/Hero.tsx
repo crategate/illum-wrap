@@ -6,16 +6,28 @@ import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 import { Logo } from './Logo';
 
 const Hero = () => {
-  const [simi, setSimi] = useState(0);
-  const bend = () => {
-    setSimi(1);
+  const [light, setLight] = useState(false);
+  const [color, setColor] = useState(false);
+  const [photo, setPhoto] = useState(false);
+  const allFalse = () => {
+    setLight(false);
+    setColor(false);
+    setPhoto(false);
   };
-  const color = () => {
-    setSimi(2);
+  const bendClick = () => {
+    allFalse();
+    setLight(true);
   };
-  const photo = () => {
-    setSimi(3);
+  const colorClick = () => {
+    allFalse();
+    setColor(true);
   };
+  const photoClick = () => {
+    allFalse();
+    setPhoto(true);
+  };
+  
+
   return (
     <Background color="bg-gray-100">
       <Section yPadding="py-6">
@@ -41,10 +53,11 @@ const Hero = () => {
           <button>{simi}</button>{' '}
         </NavbarTwoColumns>
         <iframe src="https://phet.colorado.edu/sims/cheerpj/photoelectric/latest/photoelectric.html?simulation=photoelectric"
-        width="999"
-        height="600"
-        allowfullscreen>
-</iframe>
+          width="999"
+          height="600"
+          className={}
+          allowfullscreen>
+        </iframe>
       </Section>
     </Background>
   );
