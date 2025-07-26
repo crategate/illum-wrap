@@ -12,24 +12,10 @@ const NavbarTwoColumns = (props: INavbarProps) => (
       <Link href="/">{props.logo}</Link>
    </div>
     */}
-    <div className="flex flex-wrap items-center justify-center">
-      <nav className="navbar space-x-* w-100 flex items-center text-xl font-medium text-gray-800">
+    <div className="items-center justify-center">
+      <nav className="navbar w-100 flex justify-between text-xl font-medium text-gray-800">
         {props.children}
       </nav>
-
-      <style jsx>
-        {`
-          .navbar :global(li:not(:first-child)) {
-            @apply mt-0;
-          }
-          .navbar :global {
-          }
-
-          .navbar :global(li:not(:last-child)) {
-            @apply mr-5;
-          }
-        `}
-      </style>
     </div>
   </div>
 );

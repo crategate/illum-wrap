@@ -49,8 +49,12 @@ const Hero = () => {
           >
             PhotoLectric
           </button>
-          <button>{light}</button>{' '}
         </NavbarTwoColumns>
+        <div className="flex justify-center">
+          <p className="text-center text-[40px]">
+            The Buttons Above Load Neat Simulations!
+          </p>
+        </div>
         {light && (
           <iframe
             src="https://phet.colorado.edu/sims/html/bending-light/latest/bending-light_en.html"
