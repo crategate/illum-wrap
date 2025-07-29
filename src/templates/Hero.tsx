@@ -6,6 +6,7 @@ import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 import { Logo } from './Logo';
 
 const Hero = () => {
+  const [home, setHome] = useState(true);
   const [light, setLight] = useState(false);
   const [color, setColor] = useState(false);
   const [photo, setPhoto] = useState(false);
@@ -13,7 +14,12 @@ const Hero = () => {
     setLight(false);
     setColor(false);
     setPhoto(false);
+    setHome(false);
   };
+  const goHome = () => {
+    allFalse();
+    setHome(true);
+  }
   const bendClick = () => {
     allFalse();
     setLight(true);
@@ -51,7 +57,7 @@ const Hero = () => {
           </button>
         </NavbarTwoColumns>
         <div className="flex justify-center">
-          <p className="text-center text-[40px]">
+          <p className={"text-center text-[40px] " + (home ? "mt-40" : "mt-9")}>
             The Buttons Above Load Neat Simulations!
           </p>
         </div>
